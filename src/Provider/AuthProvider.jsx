@@ -5,7 +5,9 @@ import { createContext, useState } from "react";
 export const AuthContext = createContext(null);
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import app from "../Firbase/firebase.config";
+// import { GoogleAuthProvider } from "firebase/auth/cordova";
 const auth = getAuth(app);
+
 
 
 const AuthProvider = ({children}) => {
@@ -15,9 +17,12 @@ const creatUser = (email,password) =>{
     return createUserWithEmailAndPassword(auth,email,password);
 }
 
+
+
    const authInfo ={
     user,
     creatUser,
+
    }
    
     return (

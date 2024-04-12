@@ -1,0 +1,121 @@
+{
+    "estate_cards": [
+      {
+        "id": 1,
+        "estate_title": "Beautiful Farmland",
+        "segment_name": "Agricultural",
+        "description": "Scenic farmland with fertile soil, perfect for agriculture.",
+        "price": "$100,000",
+        "status": "sale",
+        "area": "10 acres",
+        "location": "Countryside, XYZ Region",
+        "facilities": ["Water access", "Fertile soil"],
+        "image": "path/to/image1.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 2,
+        "estate_title": "Residential Plot with a View",
+        "segment_name": "Residential",
+        "description": "Spacious residential plot overlooking the city skyline.",
+        "price": "$150,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Hillside, ABC City",
+        "facilities": ["Panoramic view", "Nearby amenities"],
+        "image": "path/to/image2.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 3,
+        "estate_title": "Commercial Land for Development",
+        "segment_name": "Commercial",
+        "description": "Prime commercial land suitable for development of malls or offices.",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "1 acre",
+        "location": "Downtown, XYZ City",
+        "facilities": ["Central location", "High foot traffic"],
+        "image": "path/to/image3.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 4,
+        "estate_title": "Scenic Lakefront Property",
+        "segment_name": "Residential",
+        "description": "Tranquil lakefront property ideal for a vacation home or resort.",
+        "price": "$300,000",
+        "status": "rent",
+        "area": "2 acres",
+        "location": "Lakefront, ABC Region",
+        "facilities": ["Lake access", "Peaceful surroundings"],
+        "image": "path/to/image4.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 5,
+        "estate_title": "Industrial Land for Sale",
+        "segment_name": "Industrial",
+        "description": "Spacious industrial land with easy access to transportation.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "5 acres",
+        "location": "Industrial Zone, XYZ City",
+        "facilities": ["Transportation access", "Warehousing space"],
+        "image": "path/to/image5.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 6,
+        "estate_title": "Rural Retreat with Farmhouse",
+        "segment_name": "Residential",
+        "description": "Idyllic rural retreat with a cozy farmhouse and ample land.",
+        "price": "$250,000",
+        "status": "sale",
+        "area": "3 acres",
+        "location": "Rural Area, ABC Region",
+        "facilities": ["Farmhouse", "Tranquil surroundings"],
+        "image": "path/to/image6.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 7,
+        "estate_title": "Investment Opportunity - Land Lot",
+        "segment_name": "Commercial",
+        "description": "Large land lot suitable for investment and future development.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2 acres",
+        "location": "Developing Area, XYZ City",
+        "facilities": ["Development potential", "Strategic location"],
+        "image": "path/to/image7.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 8,
+        "estate_title": "Seaside Property for Rent",
+        "segment_name": "Residential",
+        "description": "Gorgeous seaside property available for rent, perfect for vacations.",
+        "price": "$500/week",
+        "status": "rent",
+        "area": "2000 sq ft",
+        "location": "Seaside, ABC Region",
+        "facilities": ["Seaside view", "Beach access"],
+        "image": "path/to/image8.jpg",
+        "button_text": "View Property"
+      },
+      {
+        "id": 9,
+        "estate_title": "Luxury Villa with Private Garden",
+        "segment_name": "Residential",
+        "description": "Luxurious villa with spacious rooms and a beautifully landscaped garden.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "1 acre",
+        "location": "Exclusive Neighborhood, XYZ City",
+        "facilities": ["Private garden", "High-end amenities"],
+        "image": "path/to/image9.jpg",
+        "button_text": "View Property"
+      }
+    ]
+  }

@@ -13,7 +13,7 @@ console.log(e.currentTarget);
 
     return (
        <div >
-        <h1 className="text-3xl my-10 text-center">Please Login</h1>
+        <h1 className="text-3xl my-7 text-center">Please Login</h1>
          <form onSubmit={handleLogin} className="card-body  mx-auto md:w-3/4 lg:w-1/2">
         <div className="form-control">
           <label className="label">
@@ -34,6 +34,7 @@ console.log(e.currentTarget);
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
+      <button className="btn">Log in with Google</button>
       <p className="text-center mt-4">Do not have an account <Link className="text-green-800 font-bold" to="/register">Register</Link></p>
        </div>
     );

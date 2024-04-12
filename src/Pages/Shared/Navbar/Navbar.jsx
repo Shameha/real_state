@@ -1,13 +1,13 @@
 // import React from 'react';
 
 import { Link, NavLink } from "react-router-dom";
-import image from "../../../../public/pngtree-banyan-tree-logo-design-vector-png-image_6131481.png"
+import image from "../../../assets/pngtree-banyan-tree-logo-design-vector-png-image_6131481.png"
 const Navbar = () => {
 const navLink=<>
  
  <li><NavLink to="/">Home</NavLink></li>
- <li><NavLink to="/conect">conect us</NavLink></li>
- {/* <li><NavLink to="/">Hom</NavLink></li> */}
+ <li><NavLink to="/user">User profile</NavLink></li>
+ <li><NavLink to="/update">Update Profile</NavLink></li>
 
 </>
 

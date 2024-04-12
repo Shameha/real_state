@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home";
-import Contact from "../Pages/Shared/Contact";
+// import Contact from "../Pages/Shared/Contact";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import UpdateProfile from "../Pages/Shared/UpdateProfile/UpdateProfile";
+import UserProfile from "../Pages/Shared/UserProfile";
 
 
 const router = createBrowserRouter([
@@ -17,8 +19,8 @@ const router = createBrowserRouter([
 
       },
       {
-        path:'/conect',
-        element:<Contact></Contact>
+        path:'/user',
+        element:<UserProfile></UserProfile>
       },
       {
            path:'/login',
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
            path:'/register',
            element:<Register></Register>
+      },
+      {
+           path:'/update',
+           element:<UpdateProfile></UpdateProfile>
       }
   ]
 

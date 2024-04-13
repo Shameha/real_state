@@ -1,12 +1,15 @@
 // import React from 'react';
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { CgGoogle } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
 const {signIn} = useContext(AuthContext);
+const location = useLocation();
+const navigate = useNavigate()
+console.log("location of loghin ",location);
 
 const handleLogin = e =>{
     e.preventDefault();
@@ -19,6 +22,8 @@ console.log(e.currentTarget);
     signIn(email,password)
     .then(result =>{
       console.log(result.user);
+      //navigate
+      navigate(location?.state?location.state: '/');
     })
     .catch(error =>{
       console.error(error)

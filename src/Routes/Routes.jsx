@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import UpdateProfile from "../Pages/Shared/UpdateProfile/UpdateProfile";
 import UserProfile from "../Pages/Shared/UserProfile";
 import Card from "../Pages/Carrd/Card";
+import PrivateRouter from "./PrivateRouter";
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
          path:'/land/:id',
-         element:<Card></Card>
+         element:<PrivateRouter><Card></Card></PrivateRouter>,
+         loader: () =>fetch('/land.json')
       },
       {
         path:'/user',

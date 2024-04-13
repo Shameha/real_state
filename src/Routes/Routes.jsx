@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import UpdateProfile from "../Pages/Shared/UpdateProfile/UpdateProfile";
 import UserProfile from "../Pages/Shared/UserProfile";
+import Card from "../Pages/Carrd/Card";
 
 
 const router = createBrowserRouter([
@@ -15,8 +16,13 @@ const router = createBrowserRouter([
     children:[
       {
        path:'/',
-       element:<Home></Home>
+       element:<Home></Home>,
+       loader: () =>fetch('/land.json')
 
+      },
+      {
+         path:'/land/:id',
+         element:<Card></Card>
       },
       {
         path:'/user',

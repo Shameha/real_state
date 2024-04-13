@@ -17,6 +17,8 @@ const {creatUser} = useContext(AuthContext);
             const photo = form.get('photo');
 
             console.log(email,name,password,photo);
+
+            
           creatUser(email,password)
           .then(result =>{
             console.log(result.user);

@@ -14,7 +14,7 @@ import photo5 from "../../../assets/pexels-spacex-586107.jpg";
 
 const Banner = () => {
   return (
-    <div className='max-h-30 flex justify-center py-2 gap-2'>
+    <div className='max-h-30 flex justify-center  gap-2'>
     <Swiper
      // install Swiper modules
      modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -26,11 +26,11 @@ const Banner = () => {
      onSwiper={(swiper) => console.log(swiper)}
      onSlideChange={() => console.log('slide change')}
    >
-     <SwiperSlide><img width={2000} height={200} src={photo1} alt="" /></SwiperSlide>
-     <SwiperSlide><img width={2000} height={400}  src={photo2} alt="" /></SwiperSlide>
-     <SwiperSlide><img width={2000} height={400}  src={photo3} alt="" /></SwiperSlide>
-     <SwiperSlide><img width={2000} height={400}  src={photo4} alt="" /></SwiperSlide>
-     <SwiperSlide><img width={2000} height={400}  src={photo5} alt="" /></SwiperSlide>
+     <SwiperSlide><img src={photo1} alt="" /></SwiperSlide>
+     <SwiperSlide><img  src={photo2} alt="" /></SwiperSlide>
+     <SwiperSlide><img   src={photo3} alt="" /></SwiperSlide>
+     <SwiperSlide><img  src={photo4} alt="" /></SwiperSlide>
+     <SwiperSlide><img   src={photo5} alt="" /></SwiperSlide>
    
    </Swiper>
   </div>

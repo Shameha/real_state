@@ -1,12 +1,14 @@
 // import React from 'react';
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { CgGoogle } from "react-icons/cg";
-import { FaGithub } from "react-icons/fa";
+
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Button from "./Button";
+// import { toast } from "react-toastify";
 const Login = () => {
 const {signIn} = useContext(AuthContext);
+
 const location = useLocation();
 const navigate = useNavigate()
 console.log("location of loghin ",location);
@@ -19,15 +21,19 @@ console.log(e.currentTarget);
   
       const password = form.get('password');
     console.log(email,password);
+    
     signIn(email,password)
     .then(result =>{
       console.log(result.user);
+      
       //navigate
       navigate(location?.state?location.state: '/');
     })
     .catch(error =>{
       console.error(error)
     })
+
+ 
 }
 
 
@@ -53,13 +59,10 @@ console.log(e.currentTarget);
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
-        <div className="gap-5">
-        <button className="btn text-center mt-2 bg-green-800 text-slate-200"> <CgGoogle />Log in with Google</button>
-        <button className="btn text-center mt-2 lg:mx-10 bg-green-800 text-slate-200"> <FaGithub />Log in with GitHub</button>
-        </div>
+        
       </form>
-     
-      <p className="text-center mt-4"> Do not have an account <Link className="text-green-800 font-bold" to="/register">Register</Link></p>
+      <Button></Button>
+      <p  className="text-center mt-4"> Do not have an account <Link className="text-green-800 font-bold" to="/register">Register</Link></p>
        </div>
     );
 };

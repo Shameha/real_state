@@ -3,15 +3,23 @@ import { ImLocation } from "react-icons/im";
 import { MdPointOfSale } from "react-icons/md";
 import { FaChartArea } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from "react";
 const Cards = ({land}) => {
   const {estate_title,segment_name,description,price,status,area,location,facilities,image,id}=land; 
 
 
+  useEffect(() =>{
+    AOS.init({duration:3000});
+},[])
+
     return (
-        <div className="card py-10 mt-5  w-96 shadow-xl">
+<div data-aos="flip-left">
+<div className="card py-10 mt-5  w-96 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{estate_title}</h2>
+    <h2 className="card-title animate__animated animate__bounce">{estate_title}</h2>
     <h4 className="text-left text-green-900 font-bold">{segment_name}</h4>
    <div className="flex text-center gap-2">
    <ImLocation />
@@ -48,8 +56,12 @@ const Cards = ({land}) => {
       <button className="btn bg-green-800 text-white">View Property</button>
       </Link>
     </div>
-  </div>
 </div>
+  </div>
+
+</div>
+
+    
     );
 };
 

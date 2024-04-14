@@ -8,6 +8,7 @@ import UpdateProfile from "../Pages/Shared/UpdateProfile/UpdateProfile";
 import UserProfile from "../Pages/Shared/UserProfile";
 import Card from "../Pages/Carrd/Card";
 import PrivateRouter from "./PrivateRouter";
+import Land from "../Pages/land/Land";
 
 
 const router = createBrowserRouter([
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/user',
-        element:<UserProfile></UserProfile>
+        element:<PrivateRouter><UserProfile></UserProfile></PrivateRouter>
       },
       {
            path:'/login',
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
            path:'/update',
            element:<UpdateProfile></UpdateProfile>
+      },
+      {
+           path:'/land',
+           element:<PrivateRouter><Land></Land></PrivateRouter>
       }
   ]
 

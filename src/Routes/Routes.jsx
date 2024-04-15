@@ -4,7 +4,7 @@ import Home from "../Pages/Home";
 // import Contact from "../Pages/Shared/Contact";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import UpdateProfile from "../Pages/Shared/UpdateProfile/UpdateProfile";
+// import UpdateProfile from "../Pages/Shared/UpdateProfile/UpdateProfile";
 import UserProfile from "../Pages/Shared/UserProfile";
 import Card from "../Pages/Carrd/Card";
 import PrivateRouter from "./PrivateRouter";
@@ -39,10 +39,7 @@ const router = createBrowserRouter([
            path:'/register',
            element:<Register></Register>
       },
-      {
-           path:'/update',
-           element:<UpdateProfile></UpdateProfile>
-      },
+     
       {
            path:'/land',
            element:<PrivateRouter><Land></Land></PrivateRouter>

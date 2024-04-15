@@ -14,6 +14,7 @@ const Register = () => {
 const {creatUser,updateUseprofile} = useContext(AuthContext);
 const[open,setOpen] = useState(false);
 
+
         const handleRegister = e =>{
             e.preventDefault();
         console.log(e.currentTarget);
@@ -25,7 +26,7 @@ const[open,setOpen] = useState(false);
 
             console.log(email,name,password,photo);
 
-            if (password.length < 4) {
+            if (password.length < 6) {
               toast.warn("Your password needs a minimum of four characters")
             } else if (password.search(/[a-z]/) < 0) {
               toast.warn("Your password needs a lower case letter")
@@ -41,9 +42,10 @@ const[open,setOpen] = useState(false);
           creatUser(email,password)
           .then(result =>{
             updateUseprofile(name,photo)
+            
             .then(()=>{
 
-              console.log(result.user);
+              console.log("updated succesfuly",result.user);
               toast.success("Register success");
 
               

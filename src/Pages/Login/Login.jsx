@@ -2,12 +2,19 @@
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Button from "./Button";
 // import { toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import { IoEyeSharp } from "react-icons/io5";
+import { FaEyeSlash } from "react-icons/fa";
+
+
 const Login = () => {
 const {signIn} = useContext(AuthContext);
+const[open,setOpen] = useState(false);
+
 
 const location = useLocation();
 const navigate = useNavigate()
@@ -25,7 +32,7 @@ console.log(e.currentTarget);
     signIn(email,password)
     .then(result =>{
       console.log(result.user);
-      
+      toast.success("Login sucessFully")
       //navigate
       navigate(location?.state?location.state: '/');
     })
@@ -34,6 +41,11 @@ console.log(e.currentTarget);
     })
 
  
+}
+
+//
+const toggle =() =>{
+  setOpen(!open)
 }
 
 
@@ -47,15 +59,28 @@ console.log(e.currentTarget);
           </label>
           <input type="email" placeholder="email" name="email" className="input input-bordered" required />
         </div>
-        <div className="form-control">
+<div className="relative">
+<div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+          <input type={(open === false)? "password":"text"}placeholder="password" name="password" className="input input-bordered" required />
+          <div className="text-xl absolute top-10 right-5">
+         {
+          (open === false)?<FaEyeSlash onClick={toggle} />:<IoEyeSharp onClick={toggle}  />
+         }
+         
+         
+          
+         </div>
+         
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
-        </div>
+        
+        
+      </div>
+</div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
@@ -63,6 +88,7 @@ console.log(e.currentTarget);
       </form>
       <Button></Button>
       <p  className="text-center mt-4"> Do not have an account <Link className="text-green-800 font-bold" to="/register">Register</Link></p>
+      <ToastContainer />
        </div>
     );
 };

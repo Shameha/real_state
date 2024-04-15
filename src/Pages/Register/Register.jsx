@@ -1,11 +1,18 @@
 // import React from 'react';
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+// import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { IoEyeSharp } from "react-icons/io5";
+import { FaEyeSlash } from "react-icons/fa";
+
 
 const Register = () => {
 const {creatUser,updateUseprofile} = useContext(AuthContext);
+const[open,setOpen] = useState(false);
 
         const handleRegister = e =>{
             e.preventDefault();
@@ -18,6 +25,18 @@ const {creatUser,updateUseprofile} = useContext(AuthContext);
 
             console.log(email,name,password,photo);
 
+            if (password.length < 4) {
+              toast.warn("Your password needs a minimum of four characters")
+            } else if (password.search(/[a-z]/) < 0) {
+              toast.warn("Your password needs a lower case letter")
+            } else if(password.search(/[A-Z]/) < 0) {
+              toast.warn("Your password needs an uppser case letter")
+            } else  if (password.search(/[0-9]/) < 0) {
+              toast.warn("Your password needs a number")
+            } else {
+                toast.success("added success fully")
+            }
+
             
           creatUser(email,password)
           .then(result =>{
@@ -25,6 +44,8 @@ const {creatUser,updateUseprofile} = useContext(AuthContext);
             .then(()=>{
 
               console.log(result.user);
+              toast.success("Register success");
+
               
             })
           })
@@ -32,6 +53,12 @@ const {creatUser,updateUseprofile} = useContext(AuthContext);
             console.error(error)
           })
 
+
+
+        }
+
+        const toggle =() =>{
+          setOpen(!open)
         }
     return (
         <div >
@@ -55,20 +82,34 @@ const {creatUser,updateUseprofile} = useContext(AuthContext);
           </label>
           <input type="email" placeholder="email" name="email" className="input input-bordered" required />
         </div>
-        <div className="form-control">
+        <div className="relative">
+<div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+          <input type={(open === false)? "password":"text"}placeholder="password" name="password" className="input input-bordered" required />
+          <div className="text-xl absolute top-10 right-5">
+         {
+          (open === false)?<FaEyeSlash onClick={toggle} />:<IoEyeSharp onClick={toggle}  />
+         }
+         
+         
+          
+         </div>
+         
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
-        </div>
+        
+        
+      </div>
+</div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>
       </form>
       <p className="text-center mt-4">Already have an accout?<Link className="text-green-800 font-bold" to="/login">Login</Link></p>
+      <ToastContainer />
        </div>
     );
         };

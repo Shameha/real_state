@@ -32,14 +32,10 @@ const creatUser = (email,password) =>{
 
 //update user 
 const updateUseprofile=(name,photo) =>{
-    updateProfile(auth.currentUser, {
+   return updateProfile(auth.currentUser, {
         displayName: name, 
         photoURL:photo
-      }).then(() => {
-       
-      }).catch(() => {
-        
-      });
+      })
 
 }
 

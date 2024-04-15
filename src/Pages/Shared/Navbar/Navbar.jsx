@@ -48,7 +48,7 @@ const Navbar = () => {
 
 
         <div className="tooltip mt-5" data-tip= {
-          user && <span>{user?.displayName||""}</span>
+          user?.displayName||""
         }>
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

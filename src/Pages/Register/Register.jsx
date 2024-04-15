@@ -22,7 +22,11 @@ const {creatUser,updateUseprofile} = useContext(AuthContext);
           creatUser(email,password)
           .then(result =>{
             updateUseprofile(name,photo)
-            console.log(result.user);
+            .then(()=>{
+
+              console.log(result.user);
+              
+            })
           })
           .catch(error =>{
             console.error(error)

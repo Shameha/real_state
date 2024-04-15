@@ -9,12 +9,14 @@ import UserProfile from "../Pages/Shared/UserProfile";
 import Card from "../Pages/Carrd/Card";
 import PrivateRouter from "./PrivateRouter";
 import Land from "../Pages/land/Land";
+import ErrorPage from "../Pages/Error-page/ErrorPage";
 
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
        path:'/',

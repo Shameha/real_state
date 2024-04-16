@@ -1,12 +1,15 @@
 // import React from 'react';
+import { Helmet } from "react-helmet-async";
 import image from "../../assets/pexels-karolina-grabowska-4207909.jpg"
 import image1 from "../../assets/pexels-maria-orlova-4946723.jpg"
 import 'animate.css';
 
 const Land = () => {
     return (
+		
         <section className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+	<Helmet><title>Bella thorn|Land</title></Helmet>
 		<div>
 			<h2 className="text-3xl animate__animated animate__fadeInDown font-bold tracking-tight text-center sm:text-5xl dark:text-gray-900">Land use change and forest management effects on soil carbon stocks in the Northeast U.S.</h2>
 			<p className="max-w-3xl mx-auto mt-4 animate__animated animate__fadeInDown text-xl text-center dark:text-gray-600">In most regions and ecosystems, soils are the largest terrestrial carbon pool</p>

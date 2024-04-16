@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { IoEyeSharp } from "react-icons/io5";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -69,6 +70,7 @@ console.log("location of register ",location);
         }
     return (
         <div >
+          <Helmet><title>Bella thorn| Register</title></Helmet>
         <h1 className="text-3xl my-10 text-center">Please Register</h1>
          <form onSubmit={handleRegister} className="card-body  mx-auto md:w-3/4 lg:w-1/2">
         <div className="form-control">

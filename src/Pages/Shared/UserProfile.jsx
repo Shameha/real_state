@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 // import { getAuth, updateProfile } from "firebase/auth";
 // import app from "../../Firbase/firebase.config";
 
@@ -36,6 +37,7 @@ const updation = e=>{
 
     return (
        <div className="lg:flex grid">
+         <Helmet><title>Bella thorn| User Profile</title></Helmet>
          <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img src={user?.photoURL} className="max-w-sm rounded-lg shadow-2xl" />

@@ -9,6 +9,7 @@ import Button from "./Button";
 import { ToastContainer, toast } from 'react-toastify';
 import { IoEyeSharp } from "react-icons/io5";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -51,6 +52,7 @@ const toggle =() =>{
 
     return (
        <div >
+        <Helmet><title>Bella thorn|Home</title></Helmet>
         <h1 className="text-3xl my-7 text-center">Please Login</h1>
          <form onSubmit={handleLogin} className="card-body  mx-auto md:w-3/4 lg:w-1/2">
         <div className="form-control">

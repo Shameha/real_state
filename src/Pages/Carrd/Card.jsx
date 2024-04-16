@@ -1,4 +1,5 @@
 // import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { GoStarFill } from "react-icons/go";
 
 import { useLoaderData, useParams } from "react-router-dom";
@@ -11,6 +12,7 @@ const Card = () => {
     console.log(lands);
     return (
         <div>
+          <Helmet><title>Bella thorn| Details</title></Helmet>
             <h1 className="text-center font-semibold text-5xl text-green-950">{lands.segment_name}</h1>
             <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">

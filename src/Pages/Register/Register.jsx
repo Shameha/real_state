@@ -16,7 +16,7 @@ const[open,setOpen] = useState(false);
 
 const location = useLocation();
 const navigate = useNavigate()
-console.log("location of loghin ",location);
+console.log("location of register ",location);
 
         const handleRegister = e =>{
             e.preventDefault();
@@ -38,7 +38,7 @@ console.log("location of loghin ",location);
             } else  if (password.search(/[0-9]/) < 0) {
               toast.warn("Your password needs a number")
             } else {
-                toast.success("added success fully")
+                toast.success("Registered success fully")
             }
 
             
@@ -48,7 +48,7 @@ console.log("location of loghin ",location);
             
             .then(()=>{
 
-              console.log("updated succesfuly",result.user);
+              console.log("Updation complete",result.user);
               
               toast.success("Register success");
               navigate(location?.state?location.state: '/');

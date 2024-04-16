@@ -20,7 +20,7 @@ const Home = () => {
           
       
 
-          <div className="grid py-5 lg:px-10 px-3 text-center lg:grid-cols-3 grid-cols-1 md:col-span-2">
+          <div className="grid py-5 lg:px-10 px-3 text-center lg:grid-cols-3 grid-cols-1 md:grid-cols-2">
         
           
            {

@@ -86,7 +86,9 @@ const toggle =() =>{
         </div>
         
       </form>
-      <Button></Button>
+     <div className=" mx-auto md:w-3/4 lg:w-1/2">
+     <Button></Button>
+     </div>
       <p  className="text-center mt-4"> Do not have an account <Link className="text-green-800 font-bold" to="/register">Register</Link></p>
       <ToastContainer />
        </div>

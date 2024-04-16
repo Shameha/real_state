@@ -18,6 +18,7 @@ return <span className="loading loading-bars loading-lg"></span>
     return <Navigate state={location.pathname} to="/login">
 
     </Navigate>;
+    
 };
 
 export default PrivateRouter;

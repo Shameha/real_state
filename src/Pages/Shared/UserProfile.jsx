@@ -51,15 +51,15 @@ const updation = e=>{
       <form onSubmit={updation} className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">name</span>
+            <span className="label-text">{user?.displayName||""}</span>
           </label>
-          <input type="text" placeholder="Name" className="input input-bordered" required />
+          <input type="text" placeholder={user?.displayName||""} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">photo</span>
+            <span className="label-text w-auto">{user?.photoURL}</span>
           </label>
-          <input type="text" placeholder="Photo" name="photo"  className="input input-bordered" required />
+          <input type="text" placeholder={user?.photoURL} name="photo"  className="input input-bordered" required />
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Update</button>

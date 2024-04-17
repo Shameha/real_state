@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 const UserProfile = () => {
   //  const auth = getAuth(app)
 
-    const {user} = useContext(AuthContext);
+    const {user,updateUseprofile, setUser} = useContext(AuthContext);
 
   //   const update = (data) =>{
   //     const name = data.name;
@@ -30,7 +30,15 @@ const UserProfile = () => {
 const updation = e=>{
   e.preventDefault();
   const name = e.target.name.value;
-  console.log(name);
+  const photo = e.target.photo.value;
+
+updateUseprofile(name,photo)
+.then(
+  setUser({...user,displayName:name, 
+    photoURL:photo})
+)
+
+  console.log(name,photo);
 }
         
   
@@ -42,7 +50,7 @@ const updation = e=>{
         <div className="hero-content flex-col lg:flex-row">
           <img src={user?.photoURL} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
-            <h1 className="text-5xl font-bold">{user?.displayName||""}</h1>
+            <h1 className="text-5xl font-bold">{user?.displayName}</h1>
             <p className="py-6">{user?.email}</p>
           </div>
         </div>
@@ -53,13 +61,13 @@ const updation = e=>{
       <form onSubmit={updation} className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">{user?.displayName||""}</span>
+            <span className="label-text">{user?.displayName}</span>
           </label>
-          <input type="text" placeholder={user?.displayName||""} className="input input-bordered" required />
+          <input type="text" placeholder={user?.displayName} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text w-auto">{user?.photoURL}</span>
+            <span className="label-text w-auto">Photo</span>
           </label>
           <input type="text" placeholder={user?.photoURL} name="photo"  className="input input-bordered" required />
         </div>

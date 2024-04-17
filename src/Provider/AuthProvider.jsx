@@ -33,7 +33,7 @@ const creatUser = (email,password) =>{
 //update user 
 const updateUseprofile=(name,photo) =>{
    return updateProfile(auth.currentUser, {
-        displayName: name, 
+        displayName:name, 
         photoURL:photo
       })
 
@@ -95,6 +95,7 @@ return()=>{
    const authInfo ={
     user,
     loading,
+    setUser,
     creatUser,
     signIn,
      logOut,

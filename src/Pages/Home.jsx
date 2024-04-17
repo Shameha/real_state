@@ -5,6 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "./Shared/Banner/Banner";
 import Cards from "./Cards/Cards";
 import { Helmet } from "react-helmet-async";
+// import Navbar from "./Shared/Navbar/Navbar";
 
 
 
@@ -13,15 +14,15 @@ const Home = () => {
 
 // console.log(land);
     return (
-        <div>
+        <div className="lg:mt-1 md:mt-20 mt-20">
 
-			<Helmet><title>Bella thorn|Home</title></Helmet>
             <Banner></Banner>
            <div className="mt-10 py-10">
            <h1 className="text-center animate__animated animate__lightSpeedInLeft font-extrabold text-6xl">Frams & lands</h1>
            <p className="text-center animate__animated animate__slideInDown text-2xl">Here you can find our frams and lans</p>
           
       
+			<Helmet><title>Bella thorn|Home</title></Helmet>
 
           <div className="grid py-5 lg:px-10 px-3 text-center lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-10">
         

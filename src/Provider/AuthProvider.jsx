@@ -1,6 +1,7 @@
 // import React from 'react';
 
 import { createContext, useEffect, useState } from "react";
+import PropTypes from 'prop-types'
 
 export const AuthContext = createContext(null);
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
@@ -111,5 +112,9 @@ return()=>{
         </AuthContext.Provider>
     );
 };
+
+AuthProvider.propTypes = {
+    children:PropTypes.object
+    }
 
 export default AuthProvider;
